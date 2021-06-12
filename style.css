@@ -25,12 +25,13 @@ html, body {
 .home {
 	background: url('./assets/images/home.jpg') no-repeat;
     background-size: cover ;
-    /* height: 635px; */
+    padding: 20px 0px 32px 20px;
+    
 }
-.home-content {
+/* .home-content {
     padding: 20px 0px 113px 20px;
-    width: 640px;
-}
+    
+} */
 
 .logo img {
     width: 140px;
@@ -40,21 +41,49 @@ html, body {
     padding-bottom: 30px;
 }
 
-.home-content a {
+.home a {
     padding: 10px 20px;
     font-size: 25px;
     text-transform: uppercase;
+     margin-bottom: 30px; 
 }
-.home-content h1 {
+.heading {
     font-size: 50px;
-    padding: 7% 0%;
-    margin: 0;
+    padding: 3% 0% 2% 0%;
+    
 }
 
-.home-content p {
+.pre {
     margin: 0;
-    padding-bottom: 7%;
+    padding-bottom: 3%;
     font-size: 30px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+	.home {
+		height: auto;
+	}
+}
+@media (min-width: 320px) and (max-width: 768px) {
+	.pre {
+		width: 80%;
+	}
+	
+}
+@media (min-width: 768px) and (max-width: 2560px) {
+	.home {
+		height: inherit;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+	.pre {
+		width:60%;
+	}
+}
+@media (min-width: 1025px) and (max-width: 2560px) {
+	.pre {
+		width: 45%;
+	}
 }
 .btn-color {
 	background-color: #1C3A4A !important;
@@ -80,8 +109,11 @@ html, body {
 	margin: 0;
 }
 .service-list-slide img {
-	height: 200px;
+	height: 225px;
 } 
+.service-list {
+    display: contents;
+}
 .service-list .card .card-body {
 	padding: 0;
 }
@@ -146,10 +178,9 @@ a {
             }
         
 .service-list .card .card-body .card-price {
-    padding: 8px;
-    color: #d75643;
-    
-    font-size: 31px;
+    padding: 4px 8px ;
+    color: #d75643;    
+    font-size: 22px;
 }
 
 
@@ -160,30 +191,16 @@ a {
 	outline: none;
 }
 
-a {
-	text-decoration: none;
-	color: #fb6362;
-}
-/* a:hover {
-	color: #f98584;
-} */
 li {
 	list-style: none;
 }
 
-/* for containers */
-/* .container {
-	margin: 20px auto;
-	background-color: #fff;
-	overflow: hidden;
-	border-radius: 4px;
-	box-shadow: 0 0 10px rgba(0,0,0,0.2), 0 2px 3px rgba(0,0,0,0.4);
-} */
-.container .icon {
+
+/* .container .icon {
 	background-image: url('https://res.cloudinary.com/dw369yzsh/image/upload/v1483213851/icons_wykol9.png');
 	width: 27px;
 	height: 30px;
-}
+} */
 .calendar th, .graph {
 	font-family: "Gotham Medium", sans-serif;
 	color: #666666;
@@ -411,7 +428,7 @@ li {
 }
 /*inputs*/
 .booking .dates, .booking .persons {
-	width: 430px;
+	padding: 3%;
 	margin: 26px auto 0 auto;
 }
 .booking label:not(.checkbox) {
@@ -516,3 +533,79 @@ li {
 	position: absolute;
 	left: 59px;
 } */
+
+
+.payment {
+    background: url('./assets/images/btc.png') center no-repeat;
+    background-size: cover;
+    margin: 0px auto;
+    position: absolute;
+    height: inherit;
+    text-align: center;
+
+}
+.payment-contant {
+    margin: 4% auto !important;
+    background-color: white;
+}
+.btc-logo {
+
+}
+.btc-logo img{
+	width: 100%;
+	padding: 3%;
+}
+.payment-contant a.s-btn {
+	margin: 0% auto 3% auto !important;
+}
+.scan-pre {
+	margin: 10px;
+}
+@media (min-width: 280px) and (max-width: 768px) {
+	.payment-contant {
+    margin: 2% auto !important;}
+}
+.thank-you-page-content {
+    position: relative;
+    float: left;
+    width: 100%;
+    background: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.thank-you-page-content::before, .thank-you-page-content::after {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 10px;
+    width: 50%;
+    top: 80%;
+    max-width: 300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(
+-3deg
+);
+    -moz-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(
+-3deg
+);
+}
+
+.icon {
+    font-size: 100px;
+    color: #1c3a4a;
+}
+.t-heading {
+    font-size: 67px;
+    /* color: #1c3a4a; */
+    color: #d80f6b;
+}
+
+
