@@ -563,7 +563,7 @@ li {
 }
 @media (min-width: 280px) and (max-width: 768px) {
 	.payment-contant {
-    margin: 2% auto !important;}
+    margin: 15% auto !important;}
 }
 .thank-you-page-content {
     position: relative;
