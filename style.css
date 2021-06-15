@@ -14,6 +14,12 @@ html, body {
     background-color: #262626;
 
 }
+#loader h1 {
+    color: #ffffff;
+    text-align: center;
+    top: 46%;
+    position: relative;
+}
 #loader img {
 	position: relative;
 	top: 36%;
@@ -62,6 +68,16 @@ html, body {
 	.home {
 		height: auto;
 	}
+	.amount-field {
+    display: unset !important;
+}
+
+.usd-amount {
+    
+}
+.btc-amount {
+        
+}
 }
 @media (min-width: 320px) and (max-width: 768px) {
 	.pre {
@@ -102,8 +118,22 @@ html, body {
 	background-color: #1E3657 ;
 }
 
+.fa-map-marker-alt {
+    margin-right: 4px;
+}
+.location-name {
+    margin-top: -33px;
+}
+.location {
+  display: block;
+  font-size: 0.8em;
+}
+
 .service-contant {
-	padding: 10px;
+	padding: 5px;
+}
+.service-contant h1 {
+	margin: 0;
 }
 .service-contant p {
 	margin: 0;
@@ -203,10 +233,14 @@ li {
 } */
 .calendar th, .graph {
 	font-family: "Gotham Medium", sans-serif;
-	color: #666666;
+	color: #ffffff;
+}
+.calendar a.s-btn {
+	width: 100%;
+	margin: 0;
 }
 /*buttons*/
-.modal-body a.btn-big {
+.modal-body .btn-big {
 	text-transform: uppercase;
 	border: none;
 	
@@ -229,6 +263,32 @@ li {
 	background-color: #f98584;
 	position: relative;
 	top: 2px;
+}
+
+.output-text {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.output-text p {
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0;
+}
+
+form p {
+    margin: 0;
+}
+
+form label {
+    margin-top: 10px;
+}
+.amount-field {
+    
+}
+
+.btc-amount {
+    
 }
 /* a.button-big {
 	width: 296px;
@@ -342,10 +402,11 @@ li {
 .calendar table {
 	width: 287px;
 	height: 248px;
-	margin: 11px auto 20px auto;
+	margin: 10px auto 10px auto;
 	text-align: center;
 	vertical-align: middle;
-	color: #666666;
+	color: #ffffff;
+    background-color: #1c3a4a;
 }
 .calendar tr, td {
 	width: 41px;
@@ -441,9 +502,8 @@ li {
 	margin-bottom: 20px;
 }
 .booking .input-text .icon {
-	width: 36px;
-	height: 36px;
-	background-color: #404a58;
+	width: 31px;
+	height: 35px;
 	border-radius: 2px;
 	background-position: 10px -80px;
 	cursor: pointer;
@@ -547,6 +607,7 @@ li {
 .payment-contant {
     margin: 4% auto !important;
     background-color: white;
+    border-radius: 8px;
 }
 .btc-logo {
 
@@ -563,7 +624,7 @@ li {
 }
 @media (min-width: 280px) and (max-width: 768px) {
 	.payment-contant {
-    margin: 15% auto !important;}
+    margin: 5% auto !important;}
 }
 .thank-you-page-content {
     position: relative;
@@ -599,8 +660,11 @@ li {
 }
 
 .icon {
-    font-size: 100px;
+    color: #ffffff;
+}
+.fa-calendar-alt {
     color: #1c3a4a;
+    font-size: 38px;
 }
 .t-heading {
     font-size: 67px;

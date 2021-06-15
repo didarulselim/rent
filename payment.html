@@ -65,7 +65,17 @@
 		  document.getElementById("myDiv").style.display = "block";
 		}
 		</script>
-
+    <script>
+      $('#from, #to').on('input', () => {
+  const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
+  const from = new Date($('#from').val());
+  const to = new Date($('#to').val());
+  const days = (to - from) / MILLISECONDS_PER_DAY;
+  $('#output').html(days);
+  $('#usd-amount').val(days * 200);
+  $('#btc-amount').val((days * 200) * 0.000025);
+});
+  </script>
 		
 	
 
