@@ -11,7 +11,7 @@ html, body {
     height: inherit;
     position: absolute;
     text-align: center;
-    background-color: #262626;
+    background-color: #1A2A3A;
 
 }
 #loader h1 {
@@ -605,7 +605,7 @@ form label {
 
 }
 .payment-contant {
-    margin: 6% auto !important;
+    margin: 2% auto !important;
     background-color: white;
     border-radius: 8px;
 }
@@ -672,4 +672,97 @@ form label {
     color: #d80f6b;
 }
 
-
+svg {
+  width: 40vw;
+  max-height: 40vh;
+  fill: none;
+  stroke: #fff;
+  stroke-width: var(--stroke-width);
+  /* outline: 1px dashed #666; */
+  overflow: visible;
+  top: 30%;
+}
+svg path {
+  fill: var(--bg-col);
+  stroke: none;
+}
+svg .small circle {
+  transform-origin: 50% 50%;
+  animation: moveSmall 2s infinite;
+}
+svg .small {
+  --rot: 90deg;
+  animation: rotate 2s infinite;
+  transform-origin: 50% 50%;
+}
+svg .big {
+  --rot: -90deg;
+  animation: rotate 2s infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  30% {
+    transform: rotate(0);
+  }
+  70% {
+    transform: rotate(var(--rot));
+  }
+  100% {
+    transform: rotate(var(--rot));
+  }
+}
+@keyframes moveSmall {
+  0% {
+    transform: scale(1);
+    stroke-width: var(--stroke-width);
+  }
+  30% {
+    transform: scale(0.562);
+    stroke-width: calc(var(--stroke-width) / 0.562);
+  }
+  70% {
+    transform: scale(0.562);
+    stroke-width: calc(var(--stroke-width) / 0.562);
+  }
+  100% {
+    transform: scale(1);
+    stroke-width: var(--stroke-width);
+  }
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1Mu51xIIzc.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxP.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlfBBc9.ttf') format('truetype');
+}
+body {
+  --bg-col: #1A2A3A;
+  --stroke-width: 10px;
+  font-family: Roboto, sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: var(--bg-col);
+  color: #FFF;
+}
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}

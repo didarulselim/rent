@@ -60,7 +60,7 @@
 						</div>							
 					  </div>				
 					  <div class="card-body">
-					  	<h5 class="card-price">$200 /<sub>Month</sub></h5>
+					  	<h5 class="card-price">$200 /<sub>Day</sub></h5>
 					    <h5 class="card-title"><a href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal">Family Apartment Eight</a></h5>
 					    
 
@@ -108,7 +108,7 @@
 						</div>							
 					  </div>				
 					  <div class="card-body">
-					  	<h5 class="card-price">$200 /<sub>Month</sub></h5>
+					  	<h5 class="card-price">$200 /<sub>Day</sub></h5>
 					    <h5 class="card-title"><a href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal">Family Apartment Eight</a></h5>
 					    
 
@@ -156,7 +156,7 @@
 						</div>							
 					  </div>				
 					  <div class="card-body">
-					  	<h5 class="card-price">$200 /<sub>Month</sub></h5>
+					  	<h5 class="card-price">$200 /<sub>Day</sub></h5>
 					    <h5 class="card-title"><a href="#"  data-bs-toggle="modal" data-bs-target="#exampleModal">Family Apartment Eight</a></h5>
 					    
 
@@ -259,13 +259,13 @@
 								<div class="output-text">
 									<p>Total:  <span id="output"></span> days.</p>
 								</div>
-								<div class="amount-field">
+								<div class="amount-field" >
 							          <label for="usd-amount ">$USD:</label>
 							        <div class="usd-amount input-text">
 							          <input type="text" id="usd-amount"  placeholder="0.00"/>
 							        </div>
 							          <label for="btc-amount">BTC:</label>
-							        <div class="btc-amount input-text">
+							        <div class="btc-amount input-text" >
 							          <input type="text" id="btc-amount"  placeholder="0.00"/>
 							        </div>
 							      </div>
@@ -345,17 +345,17 @@
   $('#btc-amount').val((days * 200) * 0.000025);
 });
 	</script>
-    <script>
-//     	$('#btc-amount').change(function(){
-//   $btcValue = $(this).val();
-//   $('#usd-amount').val($btcValue * 225);
-// })
+<!--     <script>
+    	$('#btc-amount').change(function(){
+  $btcValue = $(this).val();
+  $('#usd-amount').val($btcValue * 225);
+})
 
-// $('#usd-amount').change(function(){
-//   $usdValue = $(this).val();
-//   $('#btc-amount').val($usd-amount * .0044);
-// })
-    </script>
+$('#usd-amount').change(function(){
+  $usdValue = $(this).val();
+  $('#btc-amount').val($usd-amount * .0044);
+})
+    </script> -->
 		<script>
 		var myVar;
 
@@ -368,39 +368,6 @@
 		  document.getElementById("myDiv").style.display = "block";
 		}
 		</script>
-
-		<script>
-			$(document).ready(function(){
-			 $('.pop-up').on('click', function(){
-			 	$('#overlay').fadeIn(300); 
-			 	$('.calendar').fadeIn(300); 
-			 	let clickedbutton = $("input",$(this).parent()).attr('id');
-			 	$('.dates').data('type',clickedbutton);
-			 });
-			 
-			 $('table').on('click', function(event){
-			   let that=$(event.target);
-			    if(that.is('td') && !that.hasClass('notCurMonth') && !that.hasClass('holiday') && !that.hasClass('curDay')){
-			    	$('td.curDay').toggleClass('curDay');
-			    	that.toggleClass('curDay');
-			    }
-			}); 
-
-			$('#add_event').on('click', function(){
-				let value= $('td.curDay').html();
-			    $('#overlay').fadeOut(300);
-			 	$('.calendar').fadeOut(300);
-			 	let id=($('.dates').data()).type;
-			 	$('#' + id).val(value+" May, 2021");
-			}); 
-
-			// $('#search').on('click', function(e){
-			// 	$('.booking').addClass('is-sent');
-			// 	e.preventDefault();
-			// });
-			});	
-		</script>
-
 		<Script>
     	var $locationText = $(".location");
 
@@ -453,6 +420,40 @@ function geoLocationError(error) {
   alert("Error: " + errors[error.code]);
 }
     </Script>
+
+		<!-- <script>
+			$(document).ready(function(){
+			 $('.pop-up').on('click', function(){
+			 	$('#overlay').fadeIn(300); 
+			 	$('.calendar').fadeIn(300); 
+			 	let clickedbutton = $("input",$(this).parent()).attr('id');
+			 	$('.dates').data('type',clickedbutton);
+			 });
+			 
+			 $('table').on('click', function(event){
+			   let that=$(event.target);
+			    if(that.is('td') && !that.hasClass('notCurMonth') && !that.hasClass('holiday') && !that.hasClass('curDay')){
+			    	$('td.curDay').toggleClass('curDay');
+			    	that.toggleClass('curDay');
+			    }
+			}); 
+
+			$('#add_event').on('click', function(){
+				let value= $('td.curDay').html();
+			    $('#overlay').fadeOut(300);
+			 	$('.calendar').fadeOut(300);
+			 	let id=($('.dates').data()).type;
+			 	$('#' + id).val(value+" May, 2021");
+			}); 
+
+			// $('#search').on('click', function(e){
+			// 	$('.booking').addClass('is-sent');
+			// 	e.preventDefault();
+			// });
+			});	
+		</script> -->
+
+		
 	
     
 

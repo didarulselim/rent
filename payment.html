@@ -19,7 +19,24 @@
   </head>
   <body onload="myFunction()" style="margin:0;">
   	<div id="loader">
-  		<img border="0" src="assets/images/loder.gif" alt="Preloder" width="200" height="200">
+  		<!-- <img border="0" src="assets/images/loder.gif" alt="Preloder" width="200" height="200"> -->
+      <svg viewBox="0 0 100 100">
+  
+  <g class="big">
+    <circle cx="50" cy="50" r="40" />
+    <path d="M 50.00 50.00 L 14.64 14.64 A 50.00 50.00 0 0 0 14.64 85.36 L 50.00 50.00" />
+    <path d="M 50.00 50.00 L 85.36 85.36 A 50.00 50.00 0 0 0 85.36 14.64 L 50.00 50.00" />
+  </g>
+  
+  <g class="small">
+    <circle cx="50" cy="50" xr="22.5" r="40"  />
+    <path d="M 50.00 50.00 L 25.25 74.75 A 35.00 35.00 0 0 0 74.75 74.75 L 50.00 50.00" />
+    <path d="M 50.00 50.00 L 74.75 25.25 A 35.00 35.00 0 0 0 25.25 25.25 L 50.00 50.00" />
+  </g>
+  
+  <circle class="pkt" cx="50" cy="50" r="5" />
+  
+</svg>
   	</div>
 
    <Section class="payment col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 " style="display:none;" id="myDiv">
@@ -39,6 +56,11 @@
 		   		Bitcoin balance for any amount. <br>
 		   		payment will be credited after 1 confirmation.
 		   	</p>
+        <form action="service.html" method="GET">
+          <div class="btc-amount input-text">
+                        <input type="text" id="btc-amount"  placeholder="0.00"/>
+                      </div>
+        </form>
 		   	<a href="thanks.html" class="btn btn-color text-white btn-big s-btn" > Confirm </a>
 
 		   	</div>
@@ -65,6 +87,7 @@
 		  document.getElementById("myDiv").style.display = "block";
 		}
 		</script>
+      <script>console.clear();</script>
     <script>
       $('#from, #to').on('input', () => {
   const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
@@ -76,7 +99,11 @@
   $('#btc-amount').val((days * 200) * 0.000025);
 });
   </script>
-		
+		<script type="text/javascript">
+    function Print() {
+        document.getElementById("btc-amount").submit();
+    }
+</script> 
 	
 
 
